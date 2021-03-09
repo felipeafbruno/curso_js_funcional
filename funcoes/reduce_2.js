@@ -32,5 +32,5 @@ const totalCarrinho = carrinho
     .map(getTotalProduto)
     .meuReduce(totalGeral)
     // .meuReduce(totalGeral, { qtde: 0, total: 0, media: 0 })
-
+ 
 console.log(totalCarrinho)

@@ -14,4 +14,4 @@ const totalCarrinho = carrinho
     .map(getTotalProduto)
     .reduce(totalGeral)
 
-console.log("Preço total da compra: R$", totalCarrinho)
+console.log("Preço total da compra: R$", totalCarrinho) 
