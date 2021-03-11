@@ -24,6 +24,9 @@ function TipoSeguro(valor) {
                 const novoValor = fn(this.valor)
                 return TipoSeguro(novoValor)
             }
+        },
+        flatMap(fn) {
+            return this.map(fn).valor
         }
     }
 }
@@ -31,6 +34,6 @@ function TipoSeguro(valor) {
 const resultado = TipoSeguro('Olá Mundo')
     .map(t => t.toUpperCase())
     .map(t => `${t}!!!`)
-    .map(t => t.split('').join(' '))
+    .flatMap(t => t.split('').join(' '))
 
 console.log(resultado)
