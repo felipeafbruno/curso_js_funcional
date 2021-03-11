@@ -1,6 +1,18 @@
 const fs = require('fs')
 const path = require('path')
 
+function composicao(...fns) {
+    return function (valor) {
+        return fns.reduce(async (acc, fn) => {
+            if(Promise.resolve(acc) === acc) {
+                return fn(await acc)   
+            } else {
+                return fn(acc)
+            }
+        }, valor)
+    }
+}
+
 function lerArquivo(caminho) {
     // readdirSync faz a leitura de todo o conteúdo do diretório de forma síncrona
     // Método retorna um array com o nome de todos os arquivos no diretório
@@ -100,6 +112,7 @@ function ordenarPorAtributoNumerico(attr, ordem='asc') {
 }  
 
 module.exports = {  
+    composicao,
     lerArquivo,
     filtroPorExtensao,
     lerConteudoArquivos,
