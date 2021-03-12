@@ -1,0 +1,23 @@
+{
+  "name": "JavaScript_Funcional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipeafbruno/curso_js_funcional.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipeafbruno/curso_js_funcional/issues"
+  },
+  "homepage": "https://github.com/felipeafbruno/curso_js_funcional#readme",
+  "dependencies": {
+    "rxjs": "^6.6.6"
+  }
+}
